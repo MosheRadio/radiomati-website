@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — RadioMati</title>
+<meta name="description" content="A look inside RadioMati's workshop — prototyping, production, EMI and environmental testing, and the finished hardware that comes out of it.">
+<link rel="icon" type="image/png" href="assets/img/mark-light.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__brand"><img src="assets/img/logo-light.png" alt="RadioMati"></a>
+  <div class="nav__links">
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="services.html">Services</a>
+    <a href="quality.html">Quality &amp; Testing</a>
+    <a href="work.html" class="is-active">Work</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="btn btn-primary nav__cta">Contact Us</a>
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav__mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">Our Story</a>
+  <a href="services.html">Services</a>
+  <a href="quality.html">Quality &amp; Testing</a>
+  <a href="work.html">Work</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="page-head grid-bg">
+  <div class="container">
+    <span class="eyebrow">Inside the workshop</span>
+    <h1 class="display mt-1" style="max-width:20ch;">The bench, the test chamber, and the hardware that comes off them.</h1>
+    <p class="lede">Photographs from our workshop in Misgav. Filter by category to view a specific stage of the process.</p>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="filters reveal">
+      <button class="is-active" data-filter="all">All</button>
+      <button data-filter="workshop">Workshop</button>
+      <button data-filter="production">Production</button>
+      <button data-filter="testing">Testing</button>
+      <button data-filter="products">Finished units</button>
+      <button data-filter="heritage">Heritage &amp; place</button>
+    </div>
+
+    <div class="gallery reveal" data-gallery>
+      <div class="gallery__item" data-category="heritage" data-caption="Mati at his radio repair bench — the standard the company is named for.">
+        <img src="assets/img/heritage-mati-workshop.jpg" alt="Mati working under a magnifying lamp at his radio repair bench" loading="lazy">
+        <span class="cap-label">Mati, at the original bench</span>
+      </div>
+      <div class="gallery__item" data-category="workshop" data-caption="Hand rework on a populated power board, under magnification.">
+        <img src="assets/img/craft-soldering-macro.jpg" alt="Close-up hand soldering on a populated power board" loading="lazy">
+        <span class="cap-label">Bench rework</span>
+      </div>
+      <div class="gallery__item" data-category="workshop" data-caption="The test bench — oscilloscope, lab supplies and a board under test.">
+        <img src="assets/img/lab-workbench-scope.jpg" alt="Test bench with oscilloscope, power supplies and a board under test" loading="lazy">
+        <span class="cap-label">Test bench</span>
+      </div>
+      <div class="gallery__item" data-category="testing" data-caption="Dual-channel oscilloscope capture during a power-stage measurement.">
+        <img src="assets/img/lab-scope-trace.jpg" alt="Oscilloscope screen showing overlaid voltage and current waveforms" loading="lazy">
+        <span class="cap-label">Scope trace</span>
+      </div>
+      <div class="gallery__item" data-category="testing" data-caption="Full anechoic chamber used for radiated emissions and immunity testing.">
+        <img src="assets/img/lab-anechoic-chamber.jpg" alt="Anechoic EMI test chamber with RF absorbers and antenna mast" loading="lazy">
+        <span class="cap-label">EMI chamber</span>
+      </div>
+      <div class="gallery__item" data-category="testing" data-caption="Thermal imaging used to trace a fault back to its source component.">
+        <img src="assets/img/failure-thermal-scan.jpg" alt="Thermal camera image of a hot component on a PCB" loading="lazy">
+        <span class="cap-label">Thermal scan</span>
+      </div>
+      <div class="gallery__item" data-category="testing" data-caption="Bode plot from a closed-loop control measurement.">
+        <img src="assets/img/chart-bode-plot.jpg" alt="Bode plot showing gain and phase from a control-loop measurement" loading="lazy">
+        <span class="cap-label">Control-loop measurement</span>
+      </div>
+      <div class="gallery__item" data-category="production" data-caption="Through-hole terminal board, hand assembled.">
+        <img src="assets/img/assembly-through-hole.jpg" alt="Through-hole terminal board assembly with input connectors" loading="lazy">
+        <span class="cap-label">Through-hole assembly</span>
+      </div>
+      <div class="gallery__item" data-category="production" data-caption="Custom wiring harness, built and dressed inside a sealed enclosure.">
+        <img src="assets/img/assembly-wiring-harness.jpg" alt="Custom wiring harness inside a sealed enclosure" loading="lazy">
+        <span class="cap-label">Harness build</span>
+      </div>
+      <div class="gallery__item" data-category="production" data-caption="Electro-mechanical box-build — boards, wiring and connectors as one unit.">
+        <img src="assets/img/assembly-electromechanical.jpg" alt="Electro-mechanical assembly inside a sealed connector box" loading="lazy">
+        <span class="cap-label">Electro-mechanical build</span>
+      </div>
+      <div class="gallery__item" data-category="products" data-caption="Finished, sealed enclosure with connectorized I/O — ready to install.">
+        <img src="assets/img/product-enclosure-1.jpg" alt="Finished sealed electronics enclosure with connectors" loading="lazy">
+        <span class="cap-label">Finished enclosure</span>
+      </div>
+      <div class="gallery__item" data-category="products" data-caption="A power unit staged for system integration testing.">
+        <img src="assets/img/product-enclosure-2.jpg" alt="Power distribution unit wired for integration testing" loading="lazy">
+        <span class="cap-label">Ready for integration</span>
+      </div>
+      <div class="gallery__item" data-category="products" data-caption="NXP i.MX 8M Nano — one of the embedded processors we design around.">
+        <img src="assets/img/chip-nxp-imx8m.jpg" alt="NXP i.MX 8M Nano embedded processor package" loading="lazy">
+        <span class="cap-label">NXP i.MX 8M Nano</span>
+      </div>
+      <div class="gallery__item" data-category="products" data-caption="Microchip PolarFire FPGA — used where flexible logic beats fixed silicon.">
+        <img src="assets/img/chip-microchip-polarfire.jpg" alt="Microchip PolarFire FPGA package" loading="lazy">
+        <span class="cap-label">Microchip PolarFire FPGA</span>
+      </div>
+      <div class="gallery__item" data-category="products" data-caption="Renesas RZ/G2L — a common choice for our embedded Linux builds.">
+        <img src="assets/img/chip-renesas-rz.jpg" alt="Renesas RZ/G2L and RZ/G2LC embedded Linux processors" loading="lazy">
+        <span class="cap-label">Renesas RZ/G2L</span>
+      </div>
+      <div class="gallery__item" data-category="heritage" data-caption="The Galilee hills around Misgav, where the workshop is based.">
+        <img src="assets/img/location-galilee-1.jpg" alt="View across the Galilee hills near Misgav" loading="lazy">
+        <span class="cap-label">Misgav, the Galilee</span>
+      </div>
+      <div class="gallery__item" data-category="heritage" data-caption="Farmland and hills near Kibbutz Lotem.">
+        <img src="assets/img/location-galilee-2.jpg" alt="Farmland and hills near Kibbutz Lotem in the Galilee" loading="lazy">
+        <span class="cap-label">Kibbutz Lotem</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox">
+  <button class="lightbox__nav prev" aria-label="Previous image">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <figure style="margin:0;">
+    <img src="" alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lightbox__nav next" aria-label="Next image">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <button class="lightbox__close" aria-label="Close">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/img/logo-light.png" alt="RadioMati" style="height:24px; margin-bottom:1.1rem;">
+        <p class="text-fog" style="max-width:32ch; font-size:0.9rem;">Integrated engineering solutions — power electronics, analog, motion control and embedded Linux — from Kibbutz Lotem, Misgav.</p>
+        <div class="badge mt-2">Elbit-approved supplier #589866</div>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <a href="about.html">Our Story</a>
+        <a href="services.html">Services</a>
+        <a href="quality.html">Quality &amp; Testing</a>
+        <a href="work.html">Work</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:idan@radiomati.com">idan@radiomati.com</a>
+        <a href="tel:+972542522281">054-252-2281</a>
+        <a href="https://www.linkedin.com/company/radiomati" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div>
+        <h5>Location</h5>
+        <a href="contact.html">Kibbutz Lotem<br>Misgav, Israel 2012400</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; RadioMati. R&amp;D to production.</span>
+      <span>Engineered in the Galilee.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
