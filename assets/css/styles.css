@@ -119,7 +119,7 @@ section { position: relative; }
   padding: 0.85em 1.5em;
   border-radius: var(--radius);
   border: 1px solid var(--line-strong);
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
 .btn:hover { transform: translateY(-1px); }
@@ -129,12 +129,12 @@ section { position: relative; }
   color: var(--signal-ink);
   font-weight: 600;
 }
-.btn-primary:hover { background: #6ee9d6; }
+.btn-primary:hover { background: #6ee9d6; box-shadow: 0 0 0 5px var(--signal-dim); }
 .btn-ghost {
   background: transparent;
   color: var(--bone);
 }
-.btn-ghost:hover { border-color: var(--signal); color: var(--signal); }
+.btn-ghost:hover { border-color: var(--signal); color: var(--signal); box-shadow: 0 0 0 5px var(--signal-dim); }
 .btn svg { width: 14px; height: 14px; }
 
 /* ---- Nav ---- */
@@ -217,11 +217,20 @@ section { position: relative; }
 }
 .hero__bg {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(11,14,19,0.55) 0%, rgba(11,14,19,0.86) 60%, var(--ink) 100%), var(--ink);
+  background: linear-gradient(180deg, rgba(11,14,19,0.4) 0%, rgba(11,14,19,0.82) 62%, var(--ink) 100%), var(--ink);
 }
-.hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.34; filter: grayscale(35%) contrast(1.05); }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.52; filter: grayscale(8%) saturate(1.2) contrast(1.08) brightness(1.04); }
+.hero__glow {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(560px circle at 18% 28%, var(--signal-dim), transparent 62%),
+    radial-gradient(480px circle at 82% 78%, var(--heritage-dim), transparent 65%);
+  animation: ambient-breathe 9s ease-in-out infinite;
+}
+@keyframes ambient-breathe { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .hero__glow { animation: none; opacity: 0.85; } }
 .hero__inner { position: relative; z-index: 2; }
-.hero__wave { width: min(680px, 92vw); margin: 1.6rem 0 2rem; }
+.hero__wave { width: min(680px, 92vw); margin: 1.6rem 0 2rem; overflow: visible; }
 .hero__wave path {
   fill: none;
   stroke: var(--signal);
@@ -231,8 +240,27 @@ section { position: relative; }
   stroke-dashoffset: 1400;
   animation: draw 2.1s cubic-bezier(.16,.84,.44,1) 0.3s forwards;
 }
-@media (prefers-reduced-motion: reduce) { .hero__wave path { animation: none; stroke-dashoffset: 0; } }
+.hero__wave .pulse {
+  stroke: #f2fffb;
+  stroke-width: 4;
+  stroke-dasharray: 26 2000;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 12px var(--signal));
+  opacity: 0;
+  animation: none, pulse-travel 4s linear 2.4s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__wave path { animation: none; stroke-dashoffset: 0; }
+  .hero__wave .pulse { display: none; }
+}
 @keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pulse-travel {
+  0%   { stroke-dashoffset: 0;     opacity: 0; }
+  4%   { opacity: 1; }
+  34%  { stroke-dashoffset: -950;  opacity: 1; }
+  40%  { stroke-dashoffset: -950;  opacity: 0; }
+  100% { stroke-dashoffset: -950;  opacity: 0; }
+}
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.2rem; }
 .hero__meta { margin-top: 3.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
 .hero__meta div { font-family: var(--font-mono); font-size: 0.78rem; color: var(--fog); }
@@ -253,7 +281,8 @@ section { position: relative; }
   transition: background 0.25s ease;
 }
 .cap:hover { background: var(--ink-3); }
-.cap__icon { width: 34px; height: 34px; color: var(--signal); margin-bottom: 1.4rem; }
+.cap__icon { width: 34px; height: 34px; color: var(--signal); margin-bottom: 1.4rem; transition: filter 0.25s ease, transform 0.25s ease; }
+.cap:hover .cap__icon { filter: drop-shadow(0 0 6px var(--signal-dim)); transform: translateY(-2px); }
 .cap__icon svg { width: 100%; height: 100%; }
 .cap h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .cap p { color: var(--fog); font-size: 0.92rem; }
@@ -283,7 +312,9 @@ section { position: relative; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
+.card:hover { border-color: var(--line-strong); box-shadow: 0 8px 28px -12px rgba(82, 224, 203, 0.25); }
 .card__media { aspect-ratio: 4/3; overflow: hidden; }
 .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .card:hover .card__media img { transform: scale(1.045); }
