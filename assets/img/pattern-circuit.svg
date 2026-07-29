@@ -1,73 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="380" height="380" viewBox="0 0 380 380">
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1200" viewBox="0 0 2000 1200">
   <g fill="none" stroke="rgba(236,232,221,0.13)" stroke-width="1.1" stroke-linecap="square">
-    <!-- chip package outline -->
-    <rect x="160" y="160" width="60" height="60"/>
+    <!-- chip packages -->
+    <rect x="200" y="380" width="140" height="100"/>
+    <rect x="700" y="150" width="80" height="60"/>
+    <rect x="1150" y="480" width="90" height="70"/>
+    <rect x="1500" y="200" width="50" height="50"/>
+    <rect x="500" y="700" width="54" height="40"/>
+    <rect x="1650" y="650" width="46" height="46"/>
 
-    <!-- right escape bus -->
-    <path d="M214,172 H250 l14,14 H350"/>
-    <path d="M214,192 H266 l14,14 H350"/>
-    <path d="M214,202 H274 l14,14 H350"/>
+    <!-- chip A to chip B -->
+    <path d="M340,410 H520 l14,-14 V194 l14,-14 H700"/>
+    <!-- chip B to chip A (return net) -->
+    <path d="M730,210 V300 l-14,14 H254 l-14,14 V380"/>
+    <!-- chip C to chip D -->
+    <path d="M1240,500 H1400 l14,-14 V234 l14,-14 H1500"/>
+    <!-- chip C to chip F -->
+    <path d="M1180,550 H1560 l14,14 V656 l14,14 H1650"/>
+    <!-- chip A to chip E -->
+    <path d="M260,480 V620 l14,14 H511 l14,14 V700"/>
 
-    <!-- left escape bus -->
-    <path d="M166,172 H130 l-14,14 H30"/>
-    <path d="M166,192 H114 l-14,14 H30"/>
-    <path d="M166,202 H106 l-14,14 H30"/>
+    <!-- board-edge connectors -->
+    <path d="M1550,215 H1700 l14,-14 H1800"/>
+    <path d="M1696,670 H1750 l14,14 H1800"/>
+    <path d="M200,410 H80 l-14,-14 H0"/>
+    <path d="M520,740 V900 l-14,14 V1000"/>
+    <path d="M730,150 V50 l14,-14 V0"/>
 
-    <!-- top escape bus -->
-    <path d="M172,166 V130 l14,-14 V30"/>
-    <path d="M192,166 V114 l14,-14 V30"/>
-    <path d="M202,166 V106 l14,-14 V30"/>
-
-    <!-- bottom escape bus -->
-    <path d="M172,214 V250 l14,14 V350"/>
-    <path d="M192,214 V266 l14,14 V350"/>
-    <path d="M202,214 V274 l14,14 V350"/>
-
-    <!-- corner test points -->
-    <path d="M60,50 V70 M320,50 V70 M60,310 V330 M320,310 V330"/>
+    <!-- incidental short stub routing -->
+    <path d="M900,700 H960 l14,14 V800"/>
+    <path d="M1050,250 V180 l-14,-14 H970"/>
+    <path d="M350,150 H420 l14,14 V240"/>
+    <path d="M1400,850 H1480 l14,-14 V760"/>
   </g>
-  <g fill="none" stroke="rgba(82,224,203,0.4)" stroke-width="1.1" stroke-linecap="square">
-    <path d="M214,182 H258 l14,14 H350"/>
-    <path d="M166,182 H122 l-14,14 H30"/>
-    <path d="M182,166 V122 l14,-14 V30"/>
-    <path d="M182,214 V258 l14,14 V350"/>
+
+  <!-- highlighted nets -->
+  <g fill="none" stroke="rgba(82,224,203,0.42)" stroke-width="1.2" stroke-linecap="square">
+    <path d="M340,440 H900 l14,14 V496 l14,14 H1150"/>
+    <path d="M1240,520 H1400 l14,14 V500 l14,-14 H1500"/>
+    <path d="M200,410 H80 l-14,-14 H0"/>
   </g>
+
+  <!-- pads / vias -->
   <g fill="rgba(236,232,221,0.26)">
-    <rect x="212" y="170" width="4" height="4"/>
-    <rect x="212" y="190" width="4" height="4"/>
-    <rect x="212" y="200" width="4" height="4"/>
-    <rect x="164" y="170" width="4" height="4"/>
-    <rect x="164" y="190" width="4" height="4"/>
-    <rect x="164" y="200" width="4" height="4"/>
-    <rect x="170" y="164" width="4" height="4"/>
-    <rect x="190" y="164" width="4" height="4"/>
-    <rect x="200" y="164" width="4" height="4"/>
-    <rect x="170" y="212" width="4" height="4"/>
-    <rect x="190" y="212" width="4" height="4"/>
-    <rect x="200" y="212" width="4" height="4"/>
-    <rect x="348" y="184" width="4" height="4"/>
-    <rect x="348" y="204" width="4" height="4"/>
-    <rect x="348" y="214" width="4" height="4"/>
-    <rect x="28" y="184" width="4" height="4"/>
-    <rect x="28" y="204" width="4" height="4"/>
-    <rect x="28" y="214" width="4" height="4"/>
-    <rect x="184" y="28" width="4" height="4"/>
-    <rect x="204" y="28" width="4" height="4"/>
-    <rect x="214" y="28" width="4" height="4"/>
-    <rect x="184" y="348" width="4" height="4"/>
-    <rect x="204" y="348" width="4" height="4"/>
-    <rect x="214" y="348" width="4" height="4"/>
-    <circle cx="60" cy="50" r="1.8"/>
-    <circle cx="60" cy="70" r="1.8"/>
-    <circle cx="320" cy="50" r="1.8"/>
-    <circle cx="320" cy="70" r="1.8"/>
-    <circle cx="60" cy="310" r="1.8"/>
-    <circle cx="60" cy="330" r="1.8"/>
-    <circle cx="320" cy="310" r="1.8"/>
-    <circle cx="320" cy="330" r="1.8"/>
+    <rect x="338" y="408" width="4" height="4"/>
+    <rect x="338" y="438" width="4" height="4"/>
+    <rect x="238" y="378" width="4" height="4"/>
+    <rect x="258" y="478" width="4" height="4"/>
+    <rect x="198" y="408" width="4" height="4"/>
+    <rect x="698" y="178" width="4" height="4"/>
+    <rect x="728" y="208" width="4" height="4"/>
+    <rect x="728" y="148" width="4" height="4"/>
+    <rect x="1148" y="508" width="4" height="4"/>
+    <rect x="1178" y="548" width="4" height="4"/>
+    <rect x="1238" y="498" width="4" height="4"/>
+    <rect x="1238" y="518" width="4" height="4"/>
+    <rect x="1498" y="218" width="4" height="4"/>
+    <rect x="1498" y="498" width="4" height="4"/>
+    <rect x="1548" y="213" width="4" height="4"/>
+    <rect x="1694" y="668" width="4" height="4"/>
+    <rect x="509" y="698" width="4" height="4"/>
+    <rect x="518" y="738" width="4" height="4"/>
+    <circle cx="1800" cy="201" r="2"/>
+    <circle cx="1800" cy="656" r="2"/>
+    <circle cx="0" cy="396" r="2"/>
+    <circle cx="520" cy="1000" r="2"/>
+    <circle cx="744" cy="0" r="2"/>
   </g>
-  <rect x="212" y="180" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
-  <rect x="164" y="180" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
-  <rect x="180" y="164" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
-  <rect x="180" y="212" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="338" y="408" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="1148" y="508" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="1498" y="218" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <circle cx="0" cy="396" r="2.4" fill="rgba(82,224,203,0.55)"/>
 </svg>

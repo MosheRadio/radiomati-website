@@ -63,13 +63,19 @@ button { font-family: inherit; }
   outline-offset: 3px;
 }
 
-/* Subtle oscilloscope-graticule texture on the base background */
+/* PCB trace texture — one continuous board, cropped differently per section */
 .grid-bg {
   background-image: url("../img/pattern-circuit.svg");
-  background-size: 380px 380px;
-  background-repeat: repeat;
-  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
 }
+.grid-bg.pos-b { background-position: 15% 55%; }
+.grid-bg.pos-c { background-position: 80% 20%; }
+.grid-bg.pos-d { background-position: 60% 70%; }
+.grid-bg.pos-e { background-position: 30% 85%; }
+.grid-bg.pos-f { background-position: 90% 60%; }
+.grid-bg.pos-full { background-position: center center; }
 
 /* ---- Type scale ---- */
 .eyebrow {
