@@ -66,7 +66,7 @@ button { font-family: inherit; }
 /* Subtle oscilloscope-graticule texture on the base background */
 .grid-bg {
   background-image: url("../img/pattern-circuit.svg");
-  background-size: 400px 400px;
+  background-size: 320px 320px;
   background-repeat: repeat;
   background-position: center top;
 }
