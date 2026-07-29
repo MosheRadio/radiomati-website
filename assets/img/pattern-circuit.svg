@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <g fill="none" stroke="rgba(236,232,221,0.13)" stroke-width="1.4" stroke-linecap="round">
+    <!-- trace 1 -->
+    <path d="M20,60 L140,60 L140,150 L230,150"/>
+    <!-- trace 2 -->
+    <path d="M320,40 L320,110 L250,110"/>
+    <!-- trace 3 -->
+    <path d="M300,300 L300,350 L360,350"/>
+    <!-- IC outline -->
+    <rect x="160" y="230" width="34" height="20" rx="1.5"/>
+    <path d="M152,234 L160,234 M152,240 L160,240 M152,246 L160,246 M194,234 L202,234 M194,240 L202,240 M194,246 L202,246"/>
+    <!-- resistor -->
+    <path d="M35,260 L50,260 M50,260 l5,-8 l8,16 l8,-16 l8,16 l8,-16 l5,8 M97,260 L112,260"/>
+  </g>
+  <g fill="rgba(236,232,221,0.22)">
+    <circle cx="20" cy="60" r="3"/>
+    <circle cx="140" cy="60" r="2.2"/>
+    <circle cx="140" cy="150" r="2.2"/>
+    <circle cx="230" cy="150" r="3"/>
+    <circle cx="320" cy="40" r="3"/>
+    <circle cx="320" cy="110" r="2.2"/>
+    <circle cx="250" cy="110" r="3"/>
+    <circle cx="300" cy="300" r="3"/>
+    <circle cx="300" cy="350" r="2.2"/>
+    <circle cx="164" cy="234" r="1"/>
+  </g>
+  <circle cx="360" cy="350" r="3.2" fill="rgba(82,224,203,0.4)"/>
+</svg>
