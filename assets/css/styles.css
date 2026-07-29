@@ -65,6 +65,7 @@ button { font-family: inherit; }
 
 /* PCB trace texture — one continuous board, cropped differently per section */
 .grid-bg {
+  position: relative;
   background-image: url("../img/pattern-circuit.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,6 +77,17 @@ button { font-family: inherit; }
 .grid-bg.pos-e { background-position: 30% 85%; }
 .grid-bg.pos-f { background-position: 90% 60%; }
 .grid-bg.pos-full { background-position: center center; }
+
+/* Legibility scrim: keeps the trace pattern from ever fighting the text on top of it */
+.grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16,29,51,0.5) 0%, rgba(16,29,51,0.66) 45%, rgba(16,29,51,0.4) 100%);
+  pointer-events: none;
+}
+.grid-bg > .container { position: relative; z-index: 1; }
+.grid-bg.oops > * { position: relative; z-index: 1; }
 
 /* ---- Type scale ---- */
 .eyebrow {
