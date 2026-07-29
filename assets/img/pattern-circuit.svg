@@ -1,34 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="380" viewBox="0 0 380 380">
   <g fill="none" stroke="rgba(236,232,221,0.13)" stroke-width="1.1" stroke-linecap="square">
-    <!-- bus A: fan-out escaping to the right, 45deg chamfers -->
-    <path d="M0,20 H50 l14,14 H190"/>
-    <path d="M0,30 H58 l14,14 H190"/>
-    <path d="M0,50 H74 l14,14 H190"/>
-    <path d="M0,60 H82 l14,14 H190"/>
-    <!-- bus B: fan-out escaping upward, 45deg chamfers -->
-    <path d="M150,240 V170 l14,-14 V90"/>
-    <path d="M160,240 V164 l14,-14 V90"/>
-    <path d="M180,240 V152 l14,-14 V90"/>
-    <!-- isolated short stubs / test traces -->
-    <path d="M230,220 H270 M270,220 l10,-10"/>
-    <path d="M40,140 V180"/>
+    <!-- chip package outline -->
+    <rect x="160" y="160" width="60" height="60"/>
+
+    <!-- right escape bus -->
+    <path d="M214,172 H250 l14,14 H350"/>
+    <path d="M214,192 H266 l14,14 H350"/>
+    <path d="M214,202 H274 l14,14 H350"/>
+
+    <!-- left escape bus -->
+    <path d="M166,172 H130 l-14,14 H30"/>
+    <path d="M166,192 H114 l-14,14 H30"/>
+    <path d="M166,202 H106 l-14,14 H30"/>
+
+    <!-- top escape bus -->
+    <path d="M172,166 V130 l14,-14 V30"/>
+    <path d="M192,166 V114 l14,-14 V30"/>
+    <path d="M202,166 V106 l14,-14 V30"/>
+
+    <!-- bottom escape bus -->
+    <path d="M172,214 V250 l14,14 V350"/>
+    <path d="M192,214 V266 l14,14 V350"/>
+    <path d="M202,214 V274 l14,14 V350"/>
+
+    <!-- corner test points -->
+    <path d="M60,50 V70 M320,50 V70 M60,310 V330 M320,310 V330"/>
   </g>
-  <g stroke="rgba(82,224,203,0.4)" stroke-width="1.1" fill="none" stroke-linecap="square">
-    <path d="M0,40 H66 l14,14 H190"/>
-    <path d="M170,240 V158 l14,-14 V90"/>
+  <g fill="none" stroke="rgba(82,224,203,0.4)" stroke-width="1.1" stroke-linecap="square">
+    <path d="M214,182 H258 l14,14 H350"/>
+    <path d="M166,182 H122 l-14,14 H30"/>
+    <path d="M182,166 V122 l14,-14 V30"/>
+    <path d="M182,214 V258 l14,14 V350"/>
   </g>
   <g fill="rgba(236,232,221,0.26)">
-    <rect x="188" y="32" width="4" height="4"/>
-    <rect x="188" y="42" width="4" height="4"/>
-    <rect x="188" y="62" width="4" height="4"/>
-    <rect x="188" y="72" width="4" height="4"/>
-    <rect x="162" y="88" width="4" height="4"/>
-    <rect x="178" y="88" width="4" height="4"/>
-    <circle cx="40" cy="140" r="2.2"/>
-    <circle cx="40" cy="180" r="2.2"/>
-    <circle cx="280" cy="210" r="2.2"/>
-    <circle cx="230" cy="220" r="2.2"/>
+    <rect x="212" y="170" width="4" height="4"/>
+    <rect x="212" y="190" width="4" height="4"/>
+    <rect x="212" y="200" width="4" height="4"/>
+    <rect x="164" y="170" width="4" height="4"/>
+    <rect x="164" y="190" width="4" height="4"/>
+    <rect x="164" y="200" width="4" height="4"/>
+    <rect x="170" y="164" width="4" height="4"/>
+    <rect x="190" y="164" width="4" height="4"/>
+    <rect x="200" y="164" width="4" height="4"/>
+    <rect x="170" y="212" width="4" height="4"/>
+    <rect x="190" y="212" width="4" height="4"/>
+    <rect x="200" y="212" width="4" height="4"/>
+    <rect x="348" y="184" width="4" height="4"/>
+    <rect x="348" y="204" width="4" height="4"/>
+    <rect x="348" y="214" width="4" height="4"/>
+    <rect x="28" y="184" width="4" height="4"/>
+    <rect x="28" y="204" width="4" height="4"/>
+    <rect x="28" y="214" width="4" height="4"/>
+    <rect x="184" y="28" width="4" height="4"/>
+    <rect x="204" y="28" width="4" height="4"/>
+    <rect x="214" y="28" width="4" height="4"/>
+    <rect x="184" y="348" width="4" height="4"/>
+    <rect x="204" y="348" width="4" height="4"/>
+    <rect x="214" y="348" width="4" height="4"/>
+    <circle cx="60" cy="50" r="1.8"/>
+    <circle cx="60" cy="70" r="1.8"/>
+    <circle cx="320" cy="50" r="1.8"/>
+    <circle cx="320" cy="70" r="1.8"/>
+    <circle cx="60" cy="310" r="1.8"/>
+    <circle cx="60" cy="330" r="1.8"/>
+    <circle cx="320" cy="310" r="1.8"/>
+    <circle cx="320" cy="330" r="1.8"/>
   </g>
-  <rect x="188" y="52" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
-  <rect x="170" y="88" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="212" y="180" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="164" y="180" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="180" y="164" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
+  <rect x="180" y="212" width="4" height="4" fill="rgba(82,224,203,0.55)"/>
 </svg>
