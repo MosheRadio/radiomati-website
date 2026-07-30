@@ -11,6 +11,11 @@
   --line:       rgba(236, 232, 221, 0.10);
   --line-strong: rgba(236, 232, 221, 0.19);
 
+  /* Translucent surfaces — let the board backdrop show through full-bleed sections */
+  --ink-t:      rgba(16, 29, 51, 0.88);
+  --ink-2-t:    rgba(24, 44, 74, 0.88);
+  --ink-3-t:    rgba(32, 57, 92, 0.88);
+
   /* Text */
   --bone:       #ece8dd;
   --bone-dim:   rgba(236, 232, 221, 0.66);
@@ -37,14 +42,30 @@
 
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
+/* One continuous circuit board fixed behind the entire site */
+.board-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--ink);
+  background-image: url("../img/pattern-circuit.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 760px) {
+  /* fixed backgrounds are unreliable on mobile browsers — let it scroll with the page instead */
+  .board-backdrop { position: absolute; height: 100%; }
+}
+
 body {
   margin: 0;
-  background: var(--ink);
+  background: transparent;
   color: var(--bone);
   font-family: var(--font-body);
   font-size: 16px;
@@ -63,27 +84,16 @@ button { font-family: inherit; }
   outline-offset: 3px;
 }
 
-/* PCB trace texture — one continuous board, cropped differently per section */
+/* These sections sit over the global board backdrop (see .board-backdrop) —
+   .grid-bg just adds a legibility scrim so text never fights the traces underneath. */
 .grid-bg {
   position: relative;
-  background-image: url("../img/pattern-circuit.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 30%;
 }
-.grid-bg.pos-b { background-position: 15% 55%; }
-.grid-bg.pos-c { background-position: 80% 20%; }
-.grid-bg.pos-d { background-position: 60% 70%; }
-.grid-bg.pos-e { background-position: 30% 85%; }
-.grid-bg.pos-f { background-position: 90% 60%; }
-.grid-bg.pos-full { background-position: center center; }
-
-/* Legibility scrim: keeps the trace pattern from ever fighting the text on top of it */
 .grid-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(16,29,51,0.5) 0%, rgba(16,29,51,0.66) 45%, rgba(16,29,51,0.4) 100%);
+  background: linear-gradient(180deg, rgba(16,29,51,0.4) 0%, rgba(16,29,51,0.58) 45%, rgba(16,29,51,0.3) 100%);
   pointer-events: none;
 }
 .grid-bg > .container { position: relative; z-index: 1; }
@@ -213,7 +223,8 @@ section { position: relative; }
 
 .nav__mobile {
   position: fixed; inset: 0; z-index: 99;
-  background: var(--ink-2);
+  background: var(--ink-2-t);
+  backdrop-filter: blur(8px);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
   transform: translateY(-100%);
   transition: transform 0.35s ease;
@@ -293,11 +304,11 @@ section { position: relative; }
 /* ---- Capability grid ---- */
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .cap {
-  background: var(--ink);
+  background: var(--ink-t);
   padding: 2.2rem 1.8rem;
   transition: background 0.25s ease;
 }
-.cap:hover { background: var(--ink-3); }
+.cap:hover { background: var(--ink-3-t); }
 .cap__icon { width: 34px; height: 34px; color: var(--signal); margin-bottom: 1.4rem; transition: filter 0.25s ease, transform 0.25s ease; }
 .cap:hover .cap__icon { filter: drop-shadow(0 0 6px var(--signal-dim)); transform: translateY(-2px); }
 .cap__icon svg { width: 100%; height: 100%; }
@@ -437,7 +448,7 @@ section { position: relative; }
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 4rem 0 2.2rem;
-  background: var(--ink-2);
+  background: var(--ink-2-t);
 }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
 @media (max-width: 780px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
