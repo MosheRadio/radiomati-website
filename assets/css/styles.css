@@ -258,6 +258,9 @@ section { position: relative; }
 @keyframes ambient-breathe { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .hero__glow { animation: none; opacity: 0.85; } }
 .hero__inner { position: relative; z-index: 2; }
+.hero__inner .lede { color: var(--bone); text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.7); }
+.hero__meta div { text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
+.hero h1 { text-shadow: 0 2px 18px rgba(0,0,0,0.5); }
 .hero__wave { width: min(680px, 92vw); margin: 1.6rem 0 2rem; overflow: visible; }
 .hero__wave path {
   fill: none;
