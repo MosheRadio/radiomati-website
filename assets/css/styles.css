@@ -297,21 +297,31 @@ section { position: relative; }
 .hero__meta div { font-family: var(--font-mono); font-size: 0.78rem; color: var(--bone); }
 .hero__meta strong { display: block; color: var(--bone); font-size: 1rem; font-family: var(--font-body); font-weight: 600; margin-top: 0.2rem; }
 
-/* ---- Partner / client wordmark bar ---- */
+/* ---- Partner / client logo bar ---- */
 .partners { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
 .partners__label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fog); white-space: nowrap; }
-.partners__row { display: flex; align-items: center; gap: clamp(1.6rem, 4vw, 3rem); flex-wrap: wrap; flex: 1; }
-.partners__row span {
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--bone-dim);
-  opacity: 0.8;
-  transition: opacity 0.2s ease, color 0.2s ease;
+.partners__row { display: flex; align-items: center; gap: clamp(2rem, 5vw, 3.5rem); flex-wrap: wrap; flex: 1; }
+.partners__row img {
+  height: clamp(20px, 2.6vw, 28px);
+  width: auto;
+  opacity: 0.75;
+  filter: grayscale(100%) brightness(1.6);
+  transition: opacity 0.2s ease, filter 0.2s ease;
 }
-.partners__row span:hover { opacity: 1; color: var(--signal); }
+.partners__row img:hover { opacity: 1; filter: grayscale(0%) brightness(1) sepia(1) hue-rotate(130deg) saturate(3); }
+.partners__mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-weight: 600;
+  color: var(--bone-dim);
+  opacity: 0.85;
+  transition: color 0.2s ease;
+}
+.partners__mark img { height: clamp(22px, 2.8vw, 30px); opacity: 1; filter: grayscale(100%) brightness(1.6); }
+.partners__mark:hover { color: var(--signal); }
 
 /* Page header for interior pages (no full hero) */
 .page-head {
