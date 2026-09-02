@@ -375,6 +375,7 @@ section { position: relative; }
 .card__media { aspect-ratio: 4/3; overflow: hidden; }
 .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .card:hover .card__media img { transform: scale(1.045); }
+.card__media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card__media.card__media--icon {
   display: flex; align-items: center; justify-content: center;
   background: radial-gradient(circle at 30% 30%, var(--ink-4), var(--ink-3));
