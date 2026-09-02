@@ -294,7 +294,7 @@ section { position: relative; }
 }
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.2rem; }
 .hero__meta { margin-top: 3.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
-.hero__meta div { font-family: var(--font-mono); font-size: 0.78rem; color: var(--fog); }
+.hero__meta div { font-family: var(--font-mono); font-size: 0.78rem; color: var(--bone); }
 .hero__meta strong { display: block; color: var(--bone); font-size: 1rem; font-family: var(--font-body); font-weight: 600; margin-top: 0.2rem; }
 
 /* Page header for interior pages (no full hero) */
